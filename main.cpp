@@ -2,19 +2,23 @@
 
 using namespace std;
 
-void square(int num);
+void power(int base, int exponent);
 
 int main(){
     cout << "GitHub Test" << endl;
-    square(1);
-    square(5);
-    square(10);
-    square(-1);
-    square(0);
+    power(1, 2);
+    power(5, 2);
+    power(10, 2);
+    power(-1, 2);
+    power(0, 2);
 
     return 0;
 }
 
-void square(int num){
-    cout << (num * num) << endl;
+void power(int base, int exponent){
+    int result = 1;
+    for(int i = 0; i < exponent; i++){
+        result = result * base;
+    }
+    cout << result << endl;
 }
